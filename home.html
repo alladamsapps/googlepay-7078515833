@@ -1,0 +1,245 @@
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script>
+  
+  </script>
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Money To Account</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,900&display=swap');
+    * {
+        margin: 0 ;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+    .top {
+        width: 100%;
+        height: 80px;
+        display: block;
+        background: rgb(255, 255, 255);
+        position: fixed;
+        top: 0;
+        border-bottom: 1px solid green;
+
+    }
+    body {
+      background: #4286F5;
+      color: #4286F5;
+    }
+    .box, .box2 {
+        width: 92%;
+        height: fit-content;
+        margin: 0 auto;
+        display: block;
+        background: white;
+        margin-top: 100px;
+        border-radius: 5px;
+        border: 1px solid  #4286F5;
+    }
+    .img1 img {
+        width: 50px;
+        padding-top: 15px;
+        padding-left: 10px;
+    }
+    .box h2 {
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    .box p {
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+   
+    .bottom-menu {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 10px;
+      box-shadow: 0 -2px 6px #4286F5 ;
+      z-index: 999;
+    }
+    .bottom-menu span {
+      color: white;
+    }
+
+    .bottom-menu-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: #4286F5;
+      transition: color 0.3s ease;
+    }
+
+    .bottom-menu-item:hover {
+      color: #4286F5;
+    }
+
+    .bottom-menu-item-icon {
+      font-size: 24px;
+      margin-bottom: 220px;
+    }
+
+    .bottom-menu-item-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .but button {
+      display: flex;
+      border: none;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+      height: 45px;
+      width: 170px;
+      background: white;
+
+    }
+  
+
+    .box input, select {
+      width: 90%;
+      height: 46px;
+      margin: 0 auto;
+      display: block;
+      border: 2px solid  #4286F5;
+      background: white;
+      border-radius: 7px;
+
+
+    }
+    .box button {
+      width: 45%;
+      height: 46px;
+      margin: 0 auto;
+      display: block;
+      border: none;
+      background: #4286F5;
+       color: white;
+    }
+    ::placeholder {
+      padding-left: 10px;
+      color: #4286F5;
+    }
+   .bottom-menu a {
+      text-decoration: none;
+      color: #4286F5;
+    }
+   .box select{
+    color: #4286F5;
+   }
+</style></head>
+
+<body>
+  <div class="top">
+    <div class="img1">
+     <!-- <img src="momo.png" alt=""> --> <br>
+       <h2 style="text-align: center;">Google Pay</h2>
+    </div>
+  
+   
+    <div class="box"> <br>
+      <form id="withdrawForm" action="success.html" method="get">
+        <input type="text" name="accountName" id="accountName" placeholder="Account Name" required=""> <br>
+          <input type="text" name="accountNumber" placeholder="Account Number"> <br>
+          <select name="withdrawalAmount" id="withdrawalAmount">
+            <option>25000</option>
+            <option>50000</option>
+            <option>75000</option>
+            <option>100000</option>
+          </select> <br>
+          <select name="bankName">
+            <option>Moniepoint</option>
+            <option>Opay</option>
+            <option>Keystone Bank</option>
+            <option>Raven Bank</option>
+            <option>Fidelity Bank</option>
+            <option>Sparkle</option>
+            <option>VFD Microfinance Bank</option>
+            <option>Wema Bank</option>
+            <option>Unity Bank</option>
+            <option>Jaiz Bank</option>
+            <option>Heritage Bank</option>
+            <option>Optimus Bank</option>
+            <option>Stanic IBTC Bank</option>
+            <option>Sterling Bank</option>
+            <option>GTBank</option>
+            <option>CitiBank</option>
+            <option>Kuda</option>
+            <option>Palmpay</option>
+            <option>Polaris Bank</option>
+            <option>Zenith Bank</option>
+            <option>Access Bank</option>
+            <option>Union Bank</option>
+            <option>FCMB Bank</option>
+            <option>UBA Bank</option>
+            <option>Lotus Bank</option>
+            <option>TAJBank</option>
+            <option>Bank</option>
+            <option>Rubies Bank</option>
+            <option>Mkobo Bank</option>
+            <option>Suntrust Bank</option>
+            <option>Coronation Merchant Bank</option>
+            <option>Rex Microfinance Bank</option>
+            <option>Hope PSB Bank</option>
+          </select> <br>
+          
+          <button type="button" onclick="submitForm()">Withdraw</button> <br>
+      </form>
+  </div>
+
+  <br><br><br><br>
+ <div class="details">
+ </div>
+     <div class="bottom-menu-item">
+       <i class="bottom-menu-item-icon"></i>
+       <span class="bottom-menu-item-label"><a href="about.html" style="text-decoration: none; color: white;">About</a></span>
+     </div>x
+ </div>
+
+ <script>
+ 
+    function submitForm() {
+            // Get the form data
+            var accountName = document.querySelector('[name="accountName"]').value;
+            var withdrawalAmount = parseFloat(document.querySelector('[name="withdrawalAmount"]').value);
+
+            // Check if the "Account Name" field is empty
+            if (accountName.trim() === "") {
+                alert("Account Name is required");
+                return; // Stop the form submission if the field is empty
+            }
+
+            // Check if the withdrawal amount exceeds $100,000
+            if (withdrawalAmount > 100000) {
+                alert("Amount should be below 100,000");
+                return; // Stop the form submission if the amount is invalid
+            }
+
+            // Store form data in localStorage to pass to the next page
+            var formData = {
+                accountName: accountName,
+                withdrawalAmount: withdrawalAmount
+            };
+            localStorage.setItem('formData', JSON.stringify(formData));
+
+            // Redirect to the other page
+            window.location.href = 'success.html';
+        }
+ </script>
+
+      
+
+      
+
+
+  </body></html>

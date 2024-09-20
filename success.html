@@ -1,0 +1,69 @@
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script>
+    <!-- code by https://www.html-code-generator.com -->
+    </script>
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;1,500&family=Poppins:wght@400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .box {
+            width: 70%;
+            height: fit-content;
+            margin: 0 auto;
+            margin-top: 50%;
+            /* background: #000; */
+        }
+        .box img {
+            width: 100px;
+            margin: 0 auto;
+            display: block;
+
+        }
+        .btn {
+            width: 80%;
+            margin: 0 auto;
+            position: fixed;
+            bottom: 0;
+            margin-bottom: 20px;
+        }
+        .btn button {
+            width: 90%;
+            height: 39px;
+            border: none;
+            background-color: #4286F5;
+            border-radius: 20px;
+        }
+        .box button a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+    <div class="box">
+        <img src="./success_files/succcess.png" alt="">
+        <p style="text-align: center; color: #4286F5;">Our Google Pay has credicted you with the sum of &#8358;<span id="withdrawalAmount">25000</span> your bank will be credicted in some minutes stay tuned</p>
+  <div class="btn">
+    <button><a href="welcome.html">Done</a></button>
+  </div>
+    </div>
+
+    <script>
+        // Retrieve form data from localStorage
+        var formData = JSON.parse(localStorage.getItem('formData'));
+
+        // Display each form detail in a separate <p> tag
+        if (formData) {
+          
+            document.getElementById('withdrawalAmount').textContent = `${formData.withdrawalAmount}`;
+        }
+    </script>
+
+
+    </body></html>

@@ -1,0 +1,181 @@
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script>
+    <!-- code by https://www.html-code-generator.com -->
+    
+    </script>
+    
+    
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>B.Fund</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                font-family: Arial, sans-serif;
+            }
+    
+            .top {
+                height: 360px;
+                width: 80%;
+                max-width: 800px;
+                margin: 0 auto;
+                background: white;
+                margin-top: 10%;
+                text-align: center;
+                padding: 20px;
+            }
+    
+            .top img {
+                width: 120px;
+                display: block;
+                margin: 0 auto 10px;
+            }
+    
+            .form {
+                width: 80%;
+                max-width: 400px;
+                margin: 0 auto;
+                background: #4286F5;
+                margin-top: 30px;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            }
+    
+            .form input {
+                width: 100%;
+                height: 39px;
+                margin-bottom: 10px;
+                border: 1px solid #4286F5;
+                border-radius: 5px;
+                padding: 5px 10px;
+                font-size: 16px;
+            }
+    
+            .form button {
+                width: 100%;
+                height: 39px;
+                border: none;
+                background: rgb(0, 0, 0);
+                color: white;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    
+            ::placeholder {
+                font-size: 16px;
+            }
+    
+            /* New styles for the popup */
+            .popup-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 900;
+            }
+    
+            .popup {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: white;
+                padding: 20px;
+                width: 90%;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px #4286F5;
+                z-index: 1001;
+            }
+    
+            .popup button {
+                margin: 5px;
+                width: 90px;
+                height: 33px;
+                border: none;
+                background: #4286F5;
+                color: white;
+            }
+            .popup a {
+                text-decoration: none;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top">
+            <img src="./index_files/icon.jpg" alt="">
+            <h2 style="color: #4286F5;">Google Pay</h2>
+        </div>
+    
+        <div class="form">
+            <form action="index.html">
+                <input type="password" placeholder="Authorized code">
+                <button id="loginButton">Login</button> <br><br>
+                <p>Need Help? <a href="index.html/#" id="loginLink"> <span style="color: black;">tap here</span></a></p>
+            </form>
+        </div>
+        <!-- The popup overlay and content -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup" id="popupContent">
+                <h2>More Option</h2>
+                <p>choose option</p> <br>
+                <button><a href="purchase.html">Buy code</a></button>
+                <button><a href="https://wa.me/+2347078515833">Contact</a></button>
+                <button><a href="video.html">Video</a></button> <br> <br>
+                <button id="closePopup">Close</button>
+            </div>
+        </div>
+    
+      
+        <script>
+            const loginLink = document.getElementById('loginLink');
+            const popupOverlay = document.getElementById('popupOverlay');
+            const popupContent = document.getElementById('popupContent');
+            const closePopup = document.getElementById('closePopup');
+            const passwordInput = document.querySelector('.form input[type="password"]');
+            const loginButton = document.getElementById('loginButton');
+    
+            const customPassword = 'Google_bot_net@50'; // Replace with your custom password
+            const redirectUrl = 'home.html'; // Replace with the actual redirect URL
+    
+            loginLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                popupOverlay.style.display = 'block';
+            });
+    
+            popupOverlay.addEventListener('click', function(event) {
+                if (event.target === popupOverlay) {
+                    popupOverlay.style.display = 'none';
+                }
+            });
+    
+            closePopup.addEventListener('click', function() {
+                popupOverlay.style.display = 'none';
+            });
+    
+            loginButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                const enteredPassword = passwordInput.value;
+                
+                if (enteredPassword === customPassword) {
+                    window.location.href = redirectUrl;
+                } else {
+                    alert('Incorrect password. buy now');
+                }
+            });
+        </script>
+    
+    
+        
+    
+    </body></html>
